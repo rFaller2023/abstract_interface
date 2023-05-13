@@ -20,11 +20,11 @@
 }
 class Abstract extends Database
 {
-    public function dbname() : string;
+    public function dbname() : string
     {
         $data="CREATE DATABASE IF NOT EXISTS $this->dbname";
         return $this->conn->query($data);
     }
 }
-$rose= new Database();
+$rose= new Abstract;
 $rose->dbname();
