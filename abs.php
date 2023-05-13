@@ -11,9 +11,10 @@
     public function _construct()
     {
         $this->conn=new mysqli ($this->servername, $this->username, $this->password);
-        $db=("CREATE DATABASE IF NOT EXISTS $this->dbname");
-        // var_dump($this->conn->error);
-        $this->conn->query(db);
     }
-    // abstract public function db(): string;
+    abstract public function db(): string; {
+        public $conn;
+        return "Database";
+    }
+
  }
